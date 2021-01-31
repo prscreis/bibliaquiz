@@ -10,10 +10,59 @@ import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
+import QuestionReview from '../../components/QuestionReview';
 
 import loadingAnimation from './animations/loading.json';
 
-function ResultWidget({ results, name }) {
+function QuestionResult({ question, answer, index }) {
+  // eslint-disable-next-line eqeqeq
+  const result = answer == question.answer;
+
+  return (
+    <QuestionReview success={result}>
+      #
+      {index + 1}
+      {' '}
+      <em>{question.title}</em>
+      Resposta:
+      {' '}
+      {question.alternatives[answer]}
+      {result === true
+        ? <img alt="Acertou" className="success" src="https://pics.freeicons.io/uploads/icons/png/11875166141558096434-512.png" />
+        : <img alt="Errou" className="wrong" src="https://pics.freeicons.io/uploads/icons/png/15491589561537355604-512.png" />}
+
+      { result === false && (
+      <>
+        <br />
+        {' '}
+        <span>
+          Resposta correta:
+          {' '}
+          {question.alternatives[question.answer]}
+        </span>
+      </>
+      )}
+
+      {question.source && (
+        <>
+          <br />
+          <span>
+            Referência:
+            {' '}
+            {question.source}
+          </span>
+        </>
+      )}
+    </QuestionReview>
+  );
+}
+
+function ResultWidget({
+  answers, questions, name,
+}) {
+  // eslint-disable-next-line eqeqeq
+  const rightAnswers = answers.filter((answer, index) => questions[index].answer == answer).length;
+
   return (
     <Widget>
       <Widget.Header>
@@ -25,20 +74,21 @@ function ResultWidget({ results, name }) {
         <p>
           Você acertou
           {' '}
-          {results.filter((x) => x).length}
+          { rightAnswers }
           {' '}
-          perguntas
+          perguntas (
+          {(rightAnswers * 100) / questions.length}
+          %):
         </p>
         <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              #
-              {index + 1}
-              {' '}
-              Resultado:
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
+          {answers.map((answer, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <li key={`answer__${answer}__${index}`}>
+              <QuestionResult
+                question={questions[index]}
+                index={index}
+                answer={answer}
+              />
             </li>
           ))}
         </ul>
@@ -72,7 +122,7 @@ function QuestionWidget({
   questionIndex,
   totalQuestions,
   onSubmit,
-  addResult,
+  addAnswer,
 }) {
   const [selectedAlternative, setSelectedAlternative] = useState(undefined);
   const [isQuestionSubmited, setIsQuestionSubmited] = useState(false);
@@ -111,7 +161,7 @@ function QuestionWidget({
             infosDoEvento.preventDefault();
             setIsQuestionSubmited(true);
             setTimeout(() => {
-              addResult(isCorrect);
+              addAnswer(selectedAlternative);
               onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
@@ -162,26 +212,30 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage({ externalQuestions, externalBg, name, title }) {
+export default function QuizPage({
+  externalQuestions, externalBg, name, title,
+}) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
-  const [results, setResults] = useState([]);
+  const [answers, setAnswers] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
   const question = externalQuestions[questionIndex];
   const totalQuestions = externalQuestions.length;
   const bg = externalBg;
 
-  function addResult(result) {
-    setResults([
-      ...results,
-      result,
+  function addAnswer(answer) {
+    setAnswers([
+      ...answers,
+      answer,
     ]);
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setScreenState(screenStates.QUIZ);
     }, 1 * 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   function handleSubmitQuiz() {
@@ -208,13 +262,20 @@ export default function QuizPage({ externalQuestions, externalBg, name, title })
             questionIndex={questionIndex}
             totalQuestions={totalQuestions}
             onSubmit={handleSubmitQuiz}
-            addResult={addResult}
+            addAnswer={addAnswer}
           />
         )}
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget name={name} results={results} />}
+        {screenState === screenStates.RESULT
+          && (
+          <ResultWidget
+            name={name}
+            answers={answers}
+            questions={externalQuestions}
+          />
+          )}
       </QuizContainer>
     </QuizBackground>
   );
