@@ -11,11 +11,12 @@ import BackLinkArrow from '../../components/BackLinkArrow';
 
 import loadingAnimation from './animations/loading.json';
 
-function ResultWidget({ results }) {
+function ResultWidget({ results, name }) {
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+        {name}
+        , veja seu resultado:
       </Widget.Header>
 
       <Widget.Content>
@@ -159,7 +160,7 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage({ externalQuestions, externalBg }) {
+export default function QuizPage({ externalQuestions, externalBg, name }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -206,7 +207,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && <ResultWidget name={name} results={results} />}
       </QuizContainer>
     </QuizBackground>
   );

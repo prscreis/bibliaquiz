@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from '../Link';
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   transition: .3s;
   &:hover {
     opacity: .5;

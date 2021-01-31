@@ -55,7 +55,7 @@ export default function Home() {
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                {`Jogar ${name}`}
+                Jogar
               </Button>
             </form>
           </Widget.Content>
@@ -88,7 +88,7 @@ export default function Home() {
                   <li key={linkExterno}>
                     <Widget.Topic
                       as={name.length === 0 ? 'label' : Link}
-                      href={projectURL}
+                      href={`${projectURL}?name=${name}`}
                       data-disabled={name.length === 0}
                     >
                       {projectLabel}
@@ -110,7 +110,7 @@ export default function Home() {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/prscreis" />
+      <GitHubCorner projectUrl="https://github.com/prscreis/bibliaquiz" />
     </QuizBackground>
   );
 }
