@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { Lottie } from '@crello/react-lottie';
+
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -160,7 +162,7 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage({ externalQuestions, externalBg, name }) {
+export default function QuizPage({ externalQuestions, externalBg, name, title }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -193,6 +195,11 @@ export default function QuizPage({ externalQuestions, externalBg, name }) {
 
   return (
     <QuizBackground backgroundImage={bg}>
+      <Head>
+        <title>
+          {title}
+        </title>
+      </Head>
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.QUIZ && (

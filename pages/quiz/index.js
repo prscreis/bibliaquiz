@@ -10,6 +10,7 @@ export default function QuizDaGaleraPage({ name }) {
       <QuizScreen
         externalQuestions={db.questions}
         externalBg={db.bg}
+        title={db.title}
         name={name}
       />
     </ThemeProvider>
