@@ -5,24 +5,122 @@
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "title": "Em quantos dias Deus criou o universo e a Terra?",
+        "description": "",
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "5",
+          "6",
+          "7",
+          "8"
         ]
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "title": "Quantos irmãos tinha José do Egito?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "5",
+           "7",
+           "11",
+           "14"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Quais tribos de Israel não possuiam nomes de filhos de Jacó?",
+        "description": "",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Manassés e Efraim",
+           "Gade e Aser",
+           "Simeão e Rúbem",
+           "Naftali e Dã"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual foi o nome do sucessor de Moisés na condução do povo de Israel à terra prometida?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+           "Calebe",
+           "Josué",
+           "Davi",
+           "Balaão"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual foi o nome do primeiro rei de Israel?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "Sansão",
+           "Otiniel",
+           "Saul",
+           "Moisés"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "O que Davi utilizou para matar o gigante Golias?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "Arco e flecha",
+           "Lança",
+           "Uma pedra e uma funda",
+           "Espingarda"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual rei de Israel foi responsável pela construção do templo em Jerusalém?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "Saul",
+           "Davi",
+           "Salomão",
+           "Abião"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Como eram chamados os discípulos mais próximos de Jesus, que o auxiliavam no seu ministério?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "Chegados",
+           "Criados",
+           "Amigos",
+           "Apóstolos"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Quantas vezes Jesus multiplicou pães e peixes?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+           "1",
+           "2",
+           "3",
+           "4"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Onde o apóstolo paulo foi picado por uma cobra?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "Roma",
+           "Atenas",
+           "Patmos",
+           "Malta"
         ]
       }
     ],
