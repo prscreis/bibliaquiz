@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { Lottie } from '@crello/react-lottie';
 
 import Widget from '../../components/Widget';
@@ -62,6 +63,7 @@ function ResultWidget({
 }) {
   // eslint-disable-next-line eqeqeq
   const rightAnswers = answers.filter((answer, index) => questions[index].answer == answer).length;
+  const router = useRouter();
 
   return (
     <Widget>
@@ -92,6 +94,15 @@ function ResultWidget({
             </li>
           ))}
         </ul>
+        <Button
+          type="button"
+          onClick={((infosDoEvento) => {
+            infosDoEvento.preventDefault();
+            router.push('/');
+          })}
+        >
+          Jogar novamente
+        </Button>
       </Widget.Content>
     </Widget>
   );
