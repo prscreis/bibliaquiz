@@ -1,4 +1,6 @@
+<div align="center">
 # Bibliaquiz
+</div>
 
 Projeto desenvolvido durante a [Imersão React Next.js](https://www.alura.com.br/imersao-react-next-js) da [Alura](https://www.alura.com.br). :computer:
 
@@ -9,22 +11,22 @@ Projeto desenvolvido durante a [Imersão React Next.js](https://www.alura.com.br
 <br>
 <br>
 
-## Principais bibliotecas utilizadas:
+### Principais bibliotecas utilizadas:
 
 - [Next.js](https://nextjs.org/)
-- [React.js](htps://pt-br.reactjs.org/)
+- [React.js](https://pt-br.reactjs.org/)
 - [Styled components](https://styled-components.com/)
 - [Framer Motion](https://framer.com/motion/)
 - [prop-types](https://npmjs.com/package/prop-types)
 
-## Melhorias no projeto original:
+### Melhorias no projeto original:
 
 - implementação de desafios propostos
 - tela de resultados detalhada
 - níveis de dificuldade (fácil, médio e difícil)
 - embaralhamento de questões a partir do nível médio
 
-## Como executar:
+### Como executar:
 
 ```bash
 # baixa dependências do projeto
