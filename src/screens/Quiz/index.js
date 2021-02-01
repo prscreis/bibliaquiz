@@ -79,7 +79,7 @@ function ResultWidget({
           { rightAnswers }
           {' '}
           perguntas (
-          {(rightAnswers * 100) / questions.length}
+          {((rightAnswers * 100) / questions.length).toFixed(2)}
           %):
         </p>
         <ul>

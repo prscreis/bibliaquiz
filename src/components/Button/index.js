@@ -17,6 +17,8 @@ const Button = styled.button`
   transition: .3s;
   cursor: pointer;
 
+  opacity: ${(props) => (props['data-selected'] ? 0.5 : 1)};
+
   &:hover,
   &:focus {
     opacity: .5;

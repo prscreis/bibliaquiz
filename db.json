@@ -134,6 +134,62 @@
         "source": "Atos 28:1-5"
       }
     ],
+    "questionsMediumLevel": [
+      {
+        "image": "https://wp-media.patheos.com/subdomain/sites/8/2016/01/shutterstock_232986844.jpg",
+        "title": "O que saiu de Jesus na cruz quando o soldado enfiou uma lança na sua lateral?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Bile",
+          "Suco de uva",
+          "Vinagre",
+          "Sangue e água"
+        ],
+        "source": "João 19:34"
+      },
+      {
+        "image": "https://jeremyberg.files.wordpress.com/2017/04/1.jpg",
+        "title": "Qual foi o nome do jovem que caiu de uma janela do terceiro andar enquanto Paulo pregava?",
+        "description": "",
+        "answer": 0,
+        "alternatives": [
+          "Êutico",
+          "Timóteo",
+          "Cornélio",
+          "Barnabé"
+        ],
+        "source": "Atos 20:7-12"
+      }
+    ],
+    "questionsHardLevel": [
+      {
+        "image": "https://i2.wp.com/www.avikatz.net/books/lit/covers/joshua.jpg",
+        "title": "Quem pediu a Deus que parasse o sol em meio a uma batalha?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "Natã",
+          "Josué",
+          "Sansão",
+          "Davi"
+        ],
+        "source": "Josué 10:12-13"
+      },
+      {
+        "image": "https://bibleask.org/wp-content/uploads/2019/03/abimelech.jpg",
+        "title": "Qual o nome do homem que pediu para que um subordinado o matasse, para não falarem que foi morto por uma mulher?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Baal",
+          "Balaão",
+          "Abimeleque",
+          "Saul"
+        ],
+        "source": "Josué 10:12-13"
+      }
+    ],
     "external": [
       "https://biblequiz.epsilveira.vercel.app/",
       "https://pato-quiz-nextjs.theedouglasam.vercel.app/",
