@@ -39,3 +39,4 @@ yarn dev
 
 - [Bibliaquiz](https://bibliaquiz.prscreis.vercel.app/)
 - [Meu website](https://www.pauloreis.dev/)
+- [Bíblia online](https://www.bibliaonline.com.br/)
