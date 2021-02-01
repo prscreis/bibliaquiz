@@ -160,6 +160,45 @@
           "Barnabé"
         ],
         "source": "Atos 20:7-12"
+      },
+      {
+        "image": "https://i.pinimg.com/564x/bd/93/f5/bd93f5bde3d21cd2d2645c35ff8fab31.jpg",
+        "title": "Quantas pessoas foram batizadas na festa de Pentecostes, após a morte de Jesus?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "200",
+          "300",
+          "400",
+          "500"
+        ],
+        "source": "Atos 2"
+      },
+      {
+        "image": "https://i.pinimg.com/474x/54/d4/2e/54d42ebcef8d18b9e736aaa78cc5d5a9.jpg",
+        "title": "Qual império dominou o reino do norte de Israel, antes da queda do reino do sul?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Babilônico",
+          "Grego",
+          "Romano",
+          "Assírio"
+        ],
+        "source": "2 Reis 17"
+      },
+      {
+        "image": "https://time.graphics/uploadedFiles/500/aa/26/aa26ed2ca20479753220c5e3a0ac5066.jpg",
+        "title": "Quantos anos durou o exílio de Israel na Babilônia?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "30",
+          "70",
+          "90",
+          "100"
+        ],
+        "source": "Jeremias 29:10-14"
       }
     ],
     "questionsHardLevel": [
@@ -178,7 +217,7 @@
       },
       {
         "image": "https://bibleask.org/wp-content/uploads/2019/03/abimelech.jpg",
-        "title": "Qual o nome do homem que pediu para que um subordinado o matasse, para não falarem que foi morto por uma mulher?",
+        "title": "Qual foi o nome do homem que pediu para que um subordinado o matasse, para não falarem que foi morto por uma mulher?",
         "description": "",
         "answer": 2,
         "alternatives": [
@@ -188,6 +227,45 @@
           "Saul"
         ],
         "source": "Josué 10:12-13"
+      },
+      {
+        "image": "https://img.timeinc.net/time/photoessays/2010/t10_witches/witch_of_endor.jpg",
+        "title": "Qual rei de Israel que foi punido por consultar os mortos?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Josias",
+          "Abner",
+          "Davi",
+          "Saul"
+        ],
+        "source": "1 Samuel 28"
+      },
+      {
+        "image": "https://i.pinimg.com/474x/4c/a7/ec/4ca7ec85cfbcf7c55d16921f2c4dfe54.jpg",
+        "title": "Onde João estava quando teve as visões do que estão descritas no livro de Apocalipse?",
+        "description": "",
+        "answer": 0,
+        "alternatives": [
+          "Patmos",
+          "Roma",
+          "Éfeso",
+          "Corinto"
+        ],
+        "source": "Apocalipse 1:9-10"
+      },
+      {
+        "image": "https://2.bp.blogspot.com/-lce9iKeFY_0/UsCtjk4Bm3I/AAAAAAAACxY/S5W1SlQwxAQ/s1600/p_0012.jpg",
+        "title": "Qual foi o nome do homem que teve uma orelha cortada durante a prisão de Jesus antes da sua cruxificação?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+          "Jairo",
+          "Tíquico",
+          "Malco",
+          "Judas"
+        ],
+        "source": "Lucas 22:47-53"
       }
     ],
     "external": [
