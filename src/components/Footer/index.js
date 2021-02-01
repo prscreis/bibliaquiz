@@ -105,7 +105,13 @@ export default function Footer(props) {
       <ul>
         {social.map((s) => (
           <li>
-            <s.button key={s.key} url={urlShare} title={msgShare} quote={msgShare}>
+            <s.button
+              key={s.key}
+              url={urlShare}
+              title={msgShare}
+              quote={msgShare}
+              hashtag={hashtagShare}
+            >
               <s.icon round size={50} />
             </s.button>
           </li>
