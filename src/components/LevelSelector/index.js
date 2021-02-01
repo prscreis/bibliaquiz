@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 
@@ -16,9 +16,9 @@ const LevelSelectorContainer = styled.div`
 
 const LevelSelector = ({ visible, currentLevel, onChangeLevel }) => (visible ? (
   <LevelSelectorContainer>
-    <Button
-      style={{ margin: '5px' }}
+    <LevelSelector.Button
       type="button"
+      color="green"
       onClick={(e) => {
         e.preventDefault();
         onChangeLevel(QuizLevel.EASY);
@@ -26,10 +26,10 @@ const LevelSelector = ({ visible, currentLevel, onChangeLevel }) => (visible ? (
       data-selected={currentLevel === QuizLevel.EASY}
     >
       Fácil
-    </Button>
-    <Button
-      style={{ margin: '5px' }}
+    </LevelSelector.Button>
+    <LevelSelector.Button
       type="button"
+      color="#ff7400"
       onClick={(e) => {
         e.preventDefault();
         onChangeLevel(QuizLevel.MEDIUM);
@@ -37,10 +37,10 @@ const LevelSelector = ({ visible, currentLevel, onChangeLevel }) => (visible ? (
       data-selected={currentLevel === QuizLevel.MEDIUM}
     >
       Médio
-    </Button>
-    <Button
-      style={{ margin: '5px' }}
+    </LevelSelector.Button>
+    <LevelSelector.Button
       type="button"
+      color="red"
       onClick={(e) => {
         e.preventDefault();
         onChangeLevel(QuizLevel.HARD);
@@ -48,9 +48,26 @@ const LevelSelector = ({ visible, currentLevel, onChangeLevel }) => (visible ? (
       data-selected={currentLevel === QuizLevel.HARD}
     >
       Difícil
-    </Button>
+    </LevelSelector.Button>
   </LevelSelectorContainer>
 ) : null);
+
+LevelSelector.Button = styled(Button)`
+    font-size:90%;
+    margin: 5px;
+
+    ${(props) => props.color
+        && css`
+            background-color: ${props.color}
+        `};
+
+    ${(props) => props['data-selected']
+        && css`
+            font-style: italic;         
+            font-weight: 900;
+            opacity: 0.5;   
+        `};
+`;
 
 LevelSelector.propTypes = {
   visible: PropTypes.bool.isRequired,
