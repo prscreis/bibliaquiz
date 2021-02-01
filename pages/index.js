@@ -13,12 +13,7 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
-
-export const QuizLevel = {
-  EASY: 'facil',
-  MEDIUM: 'medio',
-  HARD: 'dificil',
-};
+import LevelSelector, { QuizLevel } from '../src/components/LevelSelector';
 
 export default function Home() {
   const router = useRouter();
@@ -60,41 +55,11 @@ export default function Home() {
                 placeholder="Digite seu nome :)"
                 value={name}
               />
-              <div style={{ display: name.length === 0 ? 'none' : 'flex', margin: '0px -5px 10px' }}>
-                <Button
-                  style={{ margin: '5px' }}
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setLevel(QuizLevel.EASY);
-                  }}
-                  data-selected={level === QuizLevel.EASY}
-                >
-                  Fácil
-                </Button>
-                <Button
-                  style={{ margin: '5px' }}
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setLevel(QuizLevel.MEDIUM);
-                  }}
-                  data-selected={level === QuizLevel.MEDIUM}
-                >
-                  Médio
-                </Button>
-                <Button
-                  style={{ margin: '5px' }}
-                  type="button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setLevel(QuizLevel.HARD);
-                  }}
-                  data-selected={level === QuizLevel.HARD}
-                >
-                  Difícil
-                </Button>
-              </div>
+              <LevelSelector
+                visible={name.length !== 0}
+                onChangeLevel={setLevel}
+                currentLevel={level}
+              />
               <Button type="submit" disabled={name.length === 0}>
                 Jogar
               </Button>

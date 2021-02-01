@@ -2,7 +2,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
-import { QuizLevel } from '../index';
+import { QuizLevel } from '../../src/components/LevelSelector';
 import db from '../../db.json';
 
 // retirado de https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
