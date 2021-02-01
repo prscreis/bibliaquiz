@@ -25,6 +25,8 @@ Projeto desenvolvido durante a [Imersão React Next.js](https://www.alura.com.br
 - tela de resultados detalhada
 - níveis de dificuldade (fácil, médio e difícil)
 - embaralhamento de questões a partir do nível médio
+- logotipo da alura no topo leva para tela principal
+- botões de compartilhamento
 
 ### Como executar:
 
