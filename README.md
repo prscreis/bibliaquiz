@@ -1,3 +1,38 @@
+# Bibliaquiz
+
+Projeto desenvolvido durante a [Imersão React Next.js](https://www.alura.com.br/imersao-react-next-js) da [Alura](https://www.alura.com.br). :computer:
+
+<br>
+<div align="center"><img src="./bibliaquiz.png" style="width:80%"></div>
+
+[Clique aqui para acessar o quiz!!](https://bibliaquiz.prscreis.vercel.app) :book:
+<br>
+<br>
+
+## Principais bibliotecas utilizadas:
+
+- [Next.js](https://nextjs.org/)
+- [React.js](htps://pt-br.reactjs.org/)
+- [Styled components](https://styled-components.com/)
+- [Framer Motion](https://framer.com/motion/)
+- [prop-types](https://npmjs.com/package/prop-types)
+
+## Melhorias no projeto original:
+
+- implementação de desafios propostos
+- tela de resultados detalhada
+- níveis de dificuldade (fácil, médio e difícil)
+- embaralhamento de questões a partir do nível médio
+
+## Como executar:
+
+```bash
+# baixa dependências do projeto
+yarn
+# executa em http://localhost:3000
+yarn dev
+```
+
 # Example app with styled-components
 
 This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
@@ -37,14 +72,14 @@ When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `ne
 **components/StyledLink.js**
 
 ```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
+import Link from "next/link";
+import styled from "styled-components";
 
 const StyledLink = ({ as, children, className, href }) => (
   <Link href={href} as={as} passHref>
     <a className={className}>{children}</a>
   </Link>
-)
+);
 
 export default styled(StyledLink)`
   color: #0075e0;
@@ -60,19 +95,19 @@ export default styled(StyledLink)`
     outline: none;
     border: 0;
   }
-`
+`;
 ```
 
 **pages/index.js**
 
 ```javascript
-import StyledLink from '../components/StyledLink'
+import StyledLink from "../components/StyledLink";
 
 export default () => (
   <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
     First post
   </StyledLink>
-)
+);
 ```
 
 </details>
