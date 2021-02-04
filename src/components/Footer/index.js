@@ -65,6 +65,11 @@ const FooterWrapper = styled.footer`
     display:flex;
   }
 
+  h2{
+    font-size:22px;
+    margin-bottom:10px;
+  }
+
   ul{
     justify-content:space-between;
     display:flex;
@@ -102,6 +107,7 @@ export default function Footer(props) {
           <a href="https://www.pauloreis.dev" target="_blank"><span>Paulo Reis</span></a>
         </p>
       </div>
+      <h2>Compartilhe o quiz:</h2>
       <ul>
         {social.map((s) => (
           <li>
